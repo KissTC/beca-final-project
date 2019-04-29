@@ -1,0 +1,20 @@
+<div class="container">
+  <table class="table table-bordered table-inverse">
+    <tr>
+      <th>Pokemon</th>
+      <th>Tipo</th>
+      <th>Grupo Huevo</th>
+    </tr>
+    <tr *ngFor="let pokemon of poke">
+      <td>
+        <a [routerLink]="['/list/single', pokemon.id]">{{ pokemon.nombre }}</a>
+      </td>
+      <td>
+        {{ pokemon.tipo }}
+      </td>
+      <td>
+        {{ pokemon.grupoHuevo }}
+      </td>
+    </tr>
+  </table>
+</div>
